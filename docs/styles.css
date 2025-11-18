@@ -122,6 +122,46 @@ body{
   .plan-card{margin-bottom:.5rem}
 }
 
+/* Normalize card heights and layout for consistent alignment */
+/* Apply to plan cards, pricing cards (pcard) and trainer cards */
+.plan-card, .pcard, .trainer.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Ensure main body of cards grows to fill space so footers/CTAs align */
+.plan-card .card-body, .pcard .pcard-body {
+  flex: 1 1 auto;
+}
+
+/* Put CTA/footer to the bottom */
+.plan-card .btn, .pcard .pcard-footer, .trainer.card .btn { 
+  margin-top: auto;
+}
+
+/* Pricing alternative cards */
+.pcard{padding:1rem;border-radius:12px}
+.pcard .pcard-body{flex:1}
+.pcard .pcard-footer{display:flex;gap:.5rem}
+
+/* Trainer cards: make images consistent and ensure spacing */
+.trainer.card{padding:1rem}
+.trainer.card img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+.trainer.card h3{margin:.75rem 0 .35rem}
+.trainer.card p{margin:0 0 .5rem;color:var(--texto-secundario)}
+
+/* Minimum heights to avoid jitter on desktop */
+@media (min-width:992px){
+  .plan-card, .pcard {min-height:360px}
+  .trainer.card {min-height:360px}
+}
+
+@media (max-width:991px){
+  .plan-card, .pcard, .trainer.card {min-height:0}
+}
+
+
 /* Horarios & Precios — new section */
 .sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;margin-top:1rem}
 .sp-card{background:var(--blanco);padding:1.25rem;border-radius:12px;box-shadow:0 10px 30px rgba(11,15,19,0.04)}
