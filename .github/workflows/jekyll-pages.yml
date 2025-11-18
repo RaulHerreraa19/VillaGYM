@@ -1,0 +1,20 @@
+name: Build and deploy (local jekyll-build-pages test)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build site with jekyll-build-pages action (source = repo root)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: '.'
+          destination: 'docs/_site'
+          future: false
+          verbose: true
