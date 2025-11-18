@@ -107,6 +107,21 @@ body{
 .plan-featured{background:linear-gradient(180deg,var(--primario),var(--primario-claro));color:var(--blanco);box-shadow:0 18px 40px rgba(198,50,59,0.18)}
 .price{font-weight:800;font-size:1.25rem}
 
+/* Plan cards (Planes rápidos) */
+.plan-card{border:0;border-radius:14px;box-shadow:0 12px 30px rgba(11,15,19,0.06);transition:transform .18s ease, box-shadow .18s ease}
+.plan-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(11,15,19,0.09)}
+.plan-card .plan-price{font-size:1.6rem;font-weight:900;color:var(--primario)}
+.plan-card.popular{border:2px solid rgba(159,131,75,0.14)}
+.plan-card .card-body{display:flex;flex-direction:column}
+.plan-card .card-title{font-weight:700}
+.plan-card .card-text{font-size:0.96rem}
+.plan-card .badge{font-weight:700}
+
+/* Ensure cards are fully stacked on small screens */
+@media (max-width:767px){
+  .plan-card{margin-bottom:.5rem}
+}
+
 /* Horarios & Precios — new section */
 .sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;margin-top:1rem}
 .sp-card{background:var(--blanco);padding:1.25rem;border-radius:12px;box-shadow:0 10px 30px rgba(11,15,19,0.04)}
