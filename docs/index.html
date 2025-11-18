@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Villa Gym Colima — Transforma tu cuerpo</title>
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Bootstrap CSS (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/images/logo.ico" />
     <meta
       name="description"
@@ -351,8 +353,9 @@
           Encuentra el horario que se adapta a ti y el plan ideal para comenzar.
         </p>
 
-        <div class="sp-grid">
-          <div class="sp-card sp-schedule">
+        <div class="row sp-grid">
+          <div class="col-lg-6 col-md-12">
+            <div class="sp-card sp-schedule">
             <h3>Horarios</h3>
             <ul class="schedule-list">
               <li><strong>Lunes a viernes:</strong> 6:00am – 11:00pm</li>
@@ -363,9 +366,11 @@
               Siempre recomendamos llegar 10 minutos antes para calentar y
               prepararte para tu sesión.
             </p>
+            </div>
           </div>
 
-          <div class="sp-card sp-pricing">
+          <div class="col-lg-6 col-md-12">
+            <div class="sp-card sp-pricing">
             <h3>Precios</h3>
             <ul class="pricing-list">
               <li class="pricing-item">
@@ -401,6 +406,7 @@
               <a class="btn btn-primary" href="#contacto">Contáctanos</a>
               <a class="btn btn-outline" href="#planes">Ver planes completos</a>
             </div>
+            </div>
           </div>
         </div>
       </div>
@@ -410,23 +416,32 @@
     <section id="horarios-precios-alt" class="section">
       <div class="container">
         <h2>Planes rápidos</h2>
-        <p class="section-sub">Versión alternativa: tarjetas de precio destacadas para lectura rápida.</p>
+        <p class="section-sub">
+          Versión alternativa: tarjetas de precio destacadas para lectura
+          rápida.
+        </p>
 
-        <div class="pricing-cards">
-          <article class="pcard">
+        <div class="row pricing-cards">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard">
             <div class="pcard-head">
               <h4>Parejas</h4>
               <div class="pcard-price">$899</div>
             </div>
             <div class="pcard-body">
-              <p>Plan pensado para dos personas que entrenan juntas con beneficios compartidos.</p>
+              <p>
+                Plan pensado para dos personas que entrenan juntas con
+                beneficios compartidos.
+              </p>
             </div>
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Elegir</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard popular">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard popular">
             <div class="pcard-head">
               <h4>Mensualidad</h4>
               <div class="pcard-price">$569</div>
@@ -437,35 +452,46 @@
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Comenzar</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard">
             <div class="pcard-head">
               <h4>Estudiantes</h4>
               <div class="pcard-price">$419</div>
             </div>
             <div class="pcard-body">
-              <p>Descuento especial para estudiantes con identificación vigente.</p>
+              <p>
+                Descuento especial para estudiantes con identificación vigente.
+              </p>
             </div>
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Solicitar</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard">
             <div class="pcard-head">
               <h4>Anualidad</h4>
               <div class="pcard-price">$5,499</div>
             </div>
             <div class="pcard-body">
-              <p>Ahorra con la anualidad — acceso completo y prioridad en eventos.</p>
+              <p>
+                Ahorra con la anualidad — acceso completo y prioridad en
+                eventos.
+              </p>
             </div>
             <div class="pcard-footer">
               <a class="btn btn-outline" href="#contacto">Más info</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard small">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard small">
             <div class="pcard-head">
               <h4>1 visita</h4>
               <div class="pcard-price">$69</div>
@@ -476,9 +502,11 @@
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Comprar</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard small">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard small">
             <div class="pcard-head">
               <h4>5 visitas</h4>
               <div class="pcard-price">$299</div>
@@ -489,9 +517,11 @@
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Comprar</a>
             </div>
-          </article>
+            </article>
+          </div>
 
-          <article class="pcard small">
+          <div class="col-lg-4 col-md-6 mb-3">
+            <article class="pcard small">
             <div class="pcard-head">
               <h4>10 visitas</h4>
               <div class="pcard-price">$449</div>
@@ -502,11 +532,11 @@
             <div class="pcard-footer">
               <a class="btn btn-primary" href="#contacto">Comprar</a>
             </div>
-          </article>
+            </article>
+          </div>
         </div>
       </div>
     </section>
-
 
     <footer class="site-footer bg-dark">
       <div class="container footer-grid">
@@ -535,6 +565,8 @@
       </div>
     </footer>
 
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
