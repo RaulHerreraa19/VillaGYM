@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Villa Gym Colima — Transforma tu cuerpo</title>
-  <!-- Bootstrap CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="/images/logo.ico" />
     <meta
       name="description"
@@ -145,36 +148,47 @@
             Conoce a nuestro equipo de coaches certificados. Cada entrenador
             trae experiencia en fuerza, movilidad y coaching personalizado.
           </p>
-          <div class="trainers-grid">
-            <article class="trainer card reveal">
-              <img
-                src="images/trainers/trainer1.svg"
-                alt="Alejandro, entrenador de fuerza"
-              />
-              <h3>Alejandro R.</h3>
-              <p>
-                Coach de fuerza y movilidad. Certificado en programación
-                deportiva.
-              </p>
-            </article>
-            <article class="trainer card reveal">
-              <img
-                src="images/trainers/trainer2.svg"
-                alt="María, coach funcional"
-              />
-              <h3>María L.</h3>
-              <p>
-                Especialista en functional fitness y entrenamientos en grupo.
-              </p>
-            </article>
-            <article class="trainer card reveal">
-              <img
-                src="images/trainers/trainer3.svg"
-                alt="Diego, entrenador personal"
-              />
-              <h3>Diego M.</h3>
-              <p>Coaching personalizado y seguimiento nutricional básico.</p>
-            </article>
+          <div class="row trainers-grid-row">
+            <div class="col-lg-4 col-md-6 mb-3">
+              <article class="trainer card reveal h-100">
+                <img
+                  src="images/trainers/trainer1.svg"
+                  alt="Alejandro, entrenador de fuerza"
+                  class="img-fluid"
+                />
+                <h3>Alejandro R.</h3>
+                <p>
+                  Coach de fuerza y movilidad. Certificado en programación
+                  deportiva.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-3">
+              <article class="trainer card reveal h-100">
+                <img
+                  src="images/trainers/trainer2.svg"
+                  alt="María, coach funcional"
+                  class="img-fluid"
+                />
+                <h3>María L.</h3>
+                <p>
+                  Especialista en functional fitness y entrenamientos en grupo.
+                </p>
+              </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-3">
+              <article class="trainer card reveal h-100">
+                <img
+                  src="images/trainers/trainer3.svg"
+                  alt="Diego, entrenador personal"
+                  class="img-fluid"
+                />
+                <h3>Diego M.</h3>
+                <p>Coaching personalizado y seguimiento nutricional básico.</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -287,12 +301,12 @@
         <div class="carousel" aria-label="Galería del gimnasio">
           <div class="slides">
             <img
-              class="slide"
+              class="slide img-fluid"
               src="images/location/villagymlocation.jpg"
               alt="Frente del gimnasio Villa Gym Colima"
             />
             <img
-              class="slide"
+              class="slide img-fluid"
               src="images/location/villagymlocation2.jpg"
               alt="Interior del gimnasio Villa Gym Colima"
             />
@@ -356,56 +370,58 @@
         <div class="row sp-grid">
           <div class="col-lg-6 col-md-12">
             <div class="sp-card sp-schedule">
-            <h3>Horarios</h3>
-            <ul class="schedule-list">
-              <li><strong>Lunes a viernes:</strong> 6:00am – 11:00pm</li>
-              <li><strong>Sábado:</strong> 7:00am – 3:00pm</li>
-              <li><strong>Domingo:</strong> 8:00am – 2:00pm</li>
-            </ul>
-            <p class="sp-note">
-              Siempre recomendamos llegar 10 minutos antes para calentar y
-              prepararte para tu sesión.
-            </p>
+              <h3>Horarios</h3>
+              <ul class="schedule-list">
+                <li><strong>Lunes a viernes:</strong> 6:00am – 11:00pm</li>
+                <li><strong>Sábado:</strong> 7:00am – 3:00pm</li>
+                <li><strong>Domingo:</strong> 8:00am – 2:00pm</li>
+              </ul>
+              <p class="sp-note">
+                Siempre recomendamos llegar 10 minutos antes para calentar y
+                prepararte para tu sesión.
+              </p>
             </div>
           </div>
 
           <div class="col-lg-6 col-md-12">
             <div class="sp-card sp-pricing">
-            <h3>Precios</h3>
-            <ul class="pricing-list">
-              <li class="pricing-item">
-                <span class="pricing-label">Parejas</span>
-                <span class="pricing-value">$899</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">Mensualidad</span>
-                <span class="pricing-value">$569</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">Estudiantes</span>
-                <span class="pricing-value">$419</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">Anualidad</span>
-                <span class="pricing-value">$5,499</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">1 visita</span>
-                <span class="pricing-value">$69</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">5 visitas</span>
-                <span class="pricing-value">$299</span>
-              </li>
-              <li class="pricing-item">
-                <span class="pricing-label">10 visitas</span>
-                <span class="pricing-value">$449</span>
-              </li>
-            </ul>
-            <div class="pricing-cta">
-              <a class="btn btn-primary" href="#contacto">Contáctanos</a>
-              <a class="btn btn-outline" href="#planes">Ver planes completos</a>
-            </div>
+              <h3>Precios</h3>
+              <ul class="pricing-list">
+                <li class="pricing-item">
+                  <span class="pricing-label">Parejas</span>
+                  <span class="pricing-value">$899</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">Mensualidad</span>
+                  <span class="pricing-value">$569</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">Estudiantes</span>
+                  <span class="pricing-value">$419</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">Anualidad</span>
+                  <span class="pricing-value">$5,499</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">1 visita</span>
+                  <span class="pricing-value">$69</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">5 visitas</span>
+                  <span class="pricing-value">$299</span>
+                </li>
+                <li class="pricing-item">
+                  <span class="pricing-label">10 visitas</span>
+                  <span class="pricing-value">$449</span>
+                </li>
+              </ul>
+              <div class="pricing-cta">
+                <a class="btn btn-primary" href="#contacto">Contáctanos</a>
+                <a class="btn btn-outline" href="#planes"
+                  >Ver planes completos</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -424,114 +440,117 @@
         <div class="row pricing-cards">
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard">
-            <div class="pcard-head">
-              <h4>Parejas</h4>
-              <div class="pcard-price">$899</div>
-            </div>
-            <div class="pcard-body">
-              <p>
-                Plan pensado para dos personas que entrenan juntas con
-                beneficios compartidos.
-              </p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Elegir</a>
-            </div>
+              <div class="pcard-head">
+                <h4>Parejas</h4>
+                <div class="pcard-price">$899</div>
+              </div>
+              <div class="pcard-body">
+                <p>
+                  Plan pensado para dos personas que entrenan juntas con
+                  beneficios compartidos.
+                </p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Elegir</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard popular">
-            <div class="pcard-head">
-              <h4>Mensualidad</h4>
-              <div class="pcard-price">$569</div>
-            </div>
-            <div class="pcard-body">
-              <p>Opción flexible y popular: acceso completo durante un mes.</p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Comenzar</a>
-            </div>
+              <div class="pcard-head">
+                <h4>Mensualidad</h4>
+                <div class="pcard-price">$569</div>
+              </div>
+              <div class="pcard-body">
+                <p>
+                  Opción flexible y popular: acceso completo durante un mes.
+                </p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Comenzar</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard">
-            <div class="pcard-head">
-              <h4>Estudiantes</h4>
-              <div class="pcard-price">$419</div>
-            </div>
-            <div class="pcard-body">
-              <p>
-                Descuento especial para estudiantes con identificación vigente.
-              </p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Solicitar</a>
-            </div>
+              <div class="pcard-head">
+                <h4>Estudiantes</h4>
+                <div class="pcard-price">$419</div>
+              </div>
+              <div class="pcard-body">
+                <p>
+                  Descuento especial para estudiantes con identificación
+                  vigente.
+                </p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Solicitar</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard">
-            <div class="pcard-head">
-              <h4>Anualidad</h4>
-              <div class="pcard-price">$5,499</div>
-            </div>
-            <div class="pcard-body">
-              <p>
-                Ahorra con la anualidad — acceso completo y prioridad en
-                eventos.
-              </p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-outline" href="#contacto">Más info</a>
-            </div>
+              <div class="pcard-head">
+                <h4>Anualidad</h4>
+                <div class="pcard-price">$5,499</div>
+              </div>
+              <div class="pcard-body">
+                <p>
+                  Ahorra con la anualidad — acceso completo y prioridad en
+                  eventos.
+                </p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-outline" href="#contacto">Más info</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard small">
-            <div class="pcard-head">
-              <h4>1 visita</h4>
-              <div class="pcard-price">$69</div>
-            </div>
-            <div class="pcard-body">
-              <p>Entrada única, ideal para probar el gimnasio.</p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Comprar</a>
-            </div>
+              <div class="pcard-head">
+                <h4>1 visita</h4>
+                <div class="pcard-price">$69</div>
+              </div>
+              <div class="pcard-body">
+                <p>Entrada única, ideal para probar el gimnasio.</p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Comprar</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard small">
-            <div class="pcard-head">
-              <h4>5 visitas</h4>
-              <div class="pcard-price">$299</div>
-            </div>
-            <div class="pcard-body">
-              <p>Pack de 5 visitas para quien entrena ocasionalmente.</p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Comprar</a>
-            </div>
+              <div class="pcard-head">
+                <h4>5 visitas</h4>
+                <div class="pcard-price">$299</div>
+              </div>
+              <div class="pcard-body">
+                <p>Pack de 5 visitas para quien entrena ocasionalmente.</p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Comprar</a>
+              </div>
             </article>
           </div>
 
           <div class="col-lg-4 col-md-6 mb-3">
             <article class="pcard small">
-            <div class="pcard-head">
-              <h4>10 visitas</h4>
-              <div class="pcard-price">$449</div>
-            </div>
-            <div class="pcard-body">
-              <p>Pack de 10 visitas — mejor precio por sesión.</p>
-            </div>
-            <div class="pcard-footer">
-              <a class="btn btn-primary" href="#contacto">Comprar</a>
-            </div>
+              <div class="pcard-head">
+                <h4>10 visitas</h4>
+                <div class="pcard-price">$449</div>
+              </div>
+              <div class="pcard-body">
+                <p>Pack de 10 visitas — mejor precio por sesión.</p>
+              </div>
+              <div class="pcard-footer">
+                <a class="btn btn-primary" href="#contacto">Comprar</a>
+              </div>
             </article>
           </div>
         </div>
