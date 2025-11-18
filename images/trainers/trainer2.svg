@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360">
+  <rect width="100%" height="100%" fill="#F2F4F7"/>
+  <circle cx="180" cy="110" r="70" fill="#FF7A00" />
+  <rect x="60" y="200" width="240" height="110" rx="12" fill="#fff" stroke="#E6E9EE" />
+  <text x="180" y="220" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#0F1720" text-anchor="middle">María L.</text>
+  <text x="180" y="245" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#8A8D92" text-anchor="middle">Coach funcional</text>
+</svg>
