@@ -39,6 +39,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Mobile nav toggle
+  const navToggle = document.querySelector(".nav-toggle");
+  const mainNav = document.getElementById("main-nav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    });
+    // Close nav when a link is clicked
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (mainNav.classList.contains("open")) {
+          mainNav.classList.remove("open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+
   function validateEmail(email) {
     // RegEx simple, suficiente para validación básica en front
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -53,14 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function onScroll() {
     const sc = window.scrollY;
-    if (header) {
-      // Parallax para el header (más pronunciado)
-      header.style.backgroundPosition = `center calc(50% + ${sc * 0.18}px)`;
-    }
-    if (hero) {
-      // Ajuste sutil de posición de fondo para efecto parallax
-      hero.style.backgroundPosition = `center calc(50% + ${sc * 0.12}px)`;
-    }
+    // No ajustar posición del fondo (header/hero) — imagen del header es estática.
+    // Mantener solo transform sobre la imagen/logo para dar sensación de profundidad.
     if (mock) {
       // Desplazamiento sutil de la imagen/mock para dar profundidad
       mock.style.transform = `translateY(${sc * 0.06}px)`;
@@ -146,6 +159,35 @@ document.addEventListener("DOMContentLoaded", function () {
   carousel.addEventListener("mouseenter", stop);
   carousel.addEventListener("focusin", stop);
   carousel.addEventListener("mouseleave", start);
+
+  // Swipe support for touch devices
+  let touchStartX = null;
+  carousel.addEventListener(
+    "touchstart",
+    (e) => {
+      if (e.touches && e.touches.length === 1)
+        touchStartX = e.touches[0].clientX;
+      stop();
+    },
+    { passive: true }
+  );
+  carousel.addEventListener("touchend", (e) => {
+    if (touchStartX === null) return;
+    const touchEndX =
+      e.changedTouches && e.changedTouches[0]
+        ? e.changedTouches[0].clientX
+        : null;
+    if (touchEndX === null) return;
+    const diff = touchStartX - touchEndX;
+    const threshold = 40; // px
+    if (diff > threshold) {
+      next();
+    } else if (diff < -threshold) {
+      prev();
+    }
+    touchStartX = null;
+    start();
+  });
 
   show(0);
   start();
