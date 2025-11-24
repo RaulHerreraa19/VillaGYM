@@ -6,39 +6,72 @@
    --neutro-claro: fondo claro / cards (#F2F4F7)
    Variantes: --primario-claro, --primario-oscuro, etc.
 */
+
+/* Minimal overrides using Bootstrap variables and branding colors
+   This file intentionally keeps CSS minimal and relies on Bootstrap
+   for layout and responsiveness. Adjust variables below to match branding.
+*/
 :root{
-  /* Paleta final basada en el logo (colores extraídos del feed)
-     - Primario: color energético para CTAs
-     - Secundario: acento cálido
-     - Acento: dorado para highlights
-  */
-  --primario: #9f834b; /* amarillo principal del gym */
-  --primario-oscuro: #8b723f; /* variante oscura para hover/sombreados */
-  --primario-claro: #b89e64; /* variante clara para gradientes */
-  --primario-contrast: #000000; /* texto sobre primario */
-
-  --secundario: #000000; /* negro como color secundario */
-  --secundario-oscuro: #000000;
-  --secundario-claro: #222222;
-  --secundario-contrast: #FFFFFF;
-
-  --acento: #9f834b; /* usar mismo amarillo como acento (o ajustar si prefieres) */
-  --acento-contrast: #000000;
-
-  /* Neutros para texto y fondos */
-  --neutro-oscuro: #000000; /* texto principal en negro */
-  --neutro-oscuro-2: #0B0B0B; /* fondos oscuros */
-  --texto-secundario: #6B6B6B; /* gris para subtítulos y descripciones */
-
-  --neutro-claro: #F7F8FA; /* fondos suaves */
-  --blanco: #FFFFFF; /* mantener nombre original por compatibilidad */
-  --super-blanco: #FFFFFF;
-
-  /* Layout */
-  --radius: 12px;
-  --container-width: 1100px;
-  --cover-img: url('images/logo.jpg'); /* ajusta esta ruta si usas otra portada */
+  --primario: #9f834b; /* main accent (brand) */
+  --primario-contrast: #ffffff;
+  --neutro-oscuro: #0B0B0B;
+  --neutro-claro: #F7F8FA;
+  --container-max: 1100px;
 }
+
+/* Basic page container sizing (Bootstrap handles grid) */
+.container{max-width:var(--container-max)}
+
+/* Header / Hero */
+.site-header{
+  position:relative;
+  color:var(--primario-contrast);
+  background-image: url('/images/logo.jpg');
+  background-size:cover;
+  background-position:center;
+  min-height:80vh;
+  display:flex;
+  align-items:center;
+}
+.site-header .overlay{
+  position:absolute;inset:0;background:rgba(11,15,19,0.5);
+}
+.header-hero-content{position:relative;z-index:2;color:var(--primario-contrast)}
+
+/* Navbar overrides: use Bootstrap but adjust spacing and placement */
+.navbar-custom{background:transparent}
+.navbar-brand{font-weight:700;color:var(--primario-contrast)!important}
+
+/* Place the toggler to the left of the nav in small screens */
+@media (max-width:991px){
+  .navbar .navbar-toggler{order:0;margin-right:0}
+  .navbar .navbar-brand{order:1;margin-left:.5rem}
+  .navbar .navbar-collapse{order:2}
+}
+
+/* Make trainer images look consistent */
+.trainer.card img{width:100%;height:220px;object-fit:cover;border-radius:.5rem}
+
+/* Plan cards: subtle accent using brand color */
+.plan-card .plan-price{color:var(--primario);font-weight:800;font-size:1.5rem}
+.plan-card.popular{border:2px solid rgba(159,131,75,0.12)}
+
+/* Make CTAs full width on mobile for easier tapping */
+@media (max-width:767px){
+  .plan-card .btn, .pcard .pcard-footer .btn, .trainer.card .btn{width:100%}
+}
+
+/* Pricing list small tweaks */
+.pricing-item{display:flex;justify-content:space-between;padding:.6rem;border-radius:.35rem;background:#fff}
+
+/* Footer tweaks */
+.site-footer{padding:2rem 0;background:#0B0B0B;color:#fff}
+
+/* Utility: visually hidden for screen readers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* Small improvements for accessibility focus states */
+:focus{outline:3px solid rgba(159,131,75,0.16);outline-offset:2px}
 
 /* Reset ligero */
 *{box-sizing:border-box}

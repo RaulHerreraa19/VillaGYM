@@ -23,24 +23,42 @@
         <p class="eyebrow">Villa Gym Colima</p>
         <h2 class="header-tagline reveal">Comunidad • Fuerza • Resultados</h2>
       </div>
-      <div class="container header-inner">
-        <a class="brand" href="#">Villa Gym Colima</a>
-        <button
-          class="nav-toggle"
-          aria-label="Abrir menú"
-          aria-expanded="false"
-          aria-controls="main-nav"
-        >
-          ☰
-        </button>
-        <nav id="main-nav" class="nav" aria-label="Navegación principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#clases">Clases</a>
-          <a href="#entrenadores">Entrenadores</a>
-          <a href="#planes">Planes</a>
-          <a class="btn btn-ghost" href="#contacto">Contacto</a>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand ms-2" href="#">Villa Gym Colima</a>
+
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+              <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+              <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+              <li class="nav-item"><a class="nav-link btn btn-outline-light ms-lg-3" href="#contacto">Contacto</a></li>
+            </ul>
+          </div>
         </nav>
-      </div>
+
+        <div class="container header-hero-content">
+          <div class="row align-items-center py-5">
+            <div class="col-lg-7 text-white">
+              <h1 class="display-5 fw-bold">Tu gimnasio en Colima</h1>
+              <p class="lead">Entrena con los mejores profesionales y planes adaptados a ti.</p>
+              <div class="d-flex gap-2 flex-wrap">
+                <a href="#planes" class="btn btn-primary btn-lg">Conoce los planes</a>
+                <a href="#horarios" class="btn btn-outline-light btn-lg">Ver horarios</a>
+              </div>
+              <ul class="list-unstyled mt-4 text-muted">
+                <li>Entrenadores certificados</li>
+                <li>Clases grupales</li>
+                <li>Horario flexible</li>
+              </ul>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+              <img src="images/logo-hero.jpg" alt="Villa Gym" class="img-fluid rounded-3 shadow">
+            </div>
+          </div>
+        </div>
     </header>
 
     <main>
@@ -219,7 +237,10 @@
       <section id="planes" class="section bg-light">
         <div class="container">
           <h2>Planes rápidos</h2>
-          <p class="section-sub">Elige rápido el plan que más te conviene. Aquí tienes opciones claras y directas.</p>
+          <p class="section-sub">
+            Elige rápido el plan que más te conviene. Aquí tienes opciones
+            claras y directas.
+          </p>
 
           <div class="row align-items-stretch gx-3 gy-3 mt-3">
             <div class="col-lg-4 col-md-6">
@@ -228,12 +249,16 @@
                   <span class="badge bg-light text-dark mb-2">Entrada</span>
                   <h5 class="card-title">1 visita</h5>
                   <div class="plan-price my-2">$69</div>
-                  <p class="card-text text-muted">Prueba el gimnasio con una entrada única.</p>
+                  <p class="card-text text-muted">
+                    Prueba el gimnasio con una entrada única.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Acceso de 1 día</li>
                     <li>Locker y duchas</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-outline-primary mt-auto">Comprar</a>
+                  <a href="#contacto" class="btn btn-outline-primary mt-auto"
+                    >Comprar</a
+                  >
                 </div>
               </div>
             </div>
@@ -244,13 +269,17 @@
                   <span class="badge bg-warning text-dark mb-2">Popular</span>
                   <h5 class="card-title">Mensualidad</h5>
                   <div class="plan-price my-2">$569</div>
-                  <p class="card-text text-muted">Acceso completo al mes — la opción más equilibrada.</p>
+                  <p class="card-text text-muted">
+                    Acceso completo al mes — la opción más equilibrada.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Clases ilimitadas</li>
                     <li>1 sesión de coaching</li>
                     <li>Acceso a eventos</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-primary mt-auto">Comenzar</a>
+                  <a href="#contacto" class="btn btn-primary mt-auto"
+                    >Comenzar</a
+                  >
                 </div>
               </div>
             </div>
@@ -261,12 +290,16 @@
                   <span class="badge bg-light text-dark mb-2">Pack</span>
                   <h5 class="card-title">10 visitas</h5>
                   <div class="plan-price my-2">$449</div>
-                  <p class="card-text text-muted">Pack de 10 entradas — ideal si vas ocasionalmente.</p>
+                  <p class="card-text text-muted">
+                    Pack de 10 entradas — ideal si vas ocasionalmente.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Validez de 6 meses</li>
                     <li>Mejor precio por sesión</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-primary mt-auto">Comprar</a>
+                  <a href="#contacto" class="btn btn-primary mt-auto"
+                    >Comprar</a
+                  >
                 </div>
               </div>
             </div>
@@ -277,11 +310,15 @@
                   <span class="badge bg-light text-dark mb-2">Pack</span>
                   <h5 class="card-title">5 visitas</h5>
                   <div class="plan-price my-2">$299</div>
-                  <p class="card-text text-muted">Pack de 5 visitas — flexibilidad y ahorro.</p>
+                  <p class="card-text text-muted">
+                    Pack de 5 visitas — flexibilidad y ahorro.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Validez de 3 meses</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-primary mt-auto">Comprar</a>
+                  <a href="#contacto" class="btn btn-primary mt-auto"
+                    >Comprar</a
+                  >
                 </div>
               </div>
             </div>
@@ -292,11 +329,15 @@
                   <span class="badge bg-info text-dark mb-2">Descuento</span>
                   <h5 class="card-title">Estudiantes</h5>
                   <div class="plan-price my-2">$419</div>
-                  <p class="card-text text-muted">Tarifa reducida para estudiantes con ID vigente.</p>
+                  <p class="card-text text-muted">
+                    Tarifa reducida para estudiantes con ID vigente.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Descuento en mensualidad</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-primary mt-auto">Solicitar</a>
+                  <a href="#contacto" class="btn btn-primary mt-auto"
+                    >Solicitar</a
+                  >
                 </div>
               </div>
             </div>
@@ -307,12 +348,16 @@
                   <span class="badge bg-light text-dark mb-2">Ahorra</span>
                   <h5 class="card-title">Anualidad</h5>
                   <div class="plan-price my-2">$5,499</div>
-                  <p class="card-text text-muted">Pago anual con ahorro y beneficios VIP.</p>
+                  <p class="card-text text-muted">
+                    Pago anual con ahorro y beneficios VIP.
+                  </p>
                   <ul class="list-unstyled mt-auto mb-3 text-start">
                     <li>Acceso prioritario a eventos</li>
                     <li>Mejor tarifa por mes</li>
                   </ul>
-                  <a href="#contacto" class="btn btn-outline-primary mt-auto">Más info</a>
+                  <a href="#contacto" class="btn btn-outline-primary mt-auto"
+                    >Más info</a
+                  >
                 </div>
               </div>
             </div>
@@ -426,205 +471,7 @@
           <p>Domingo • 8:00am - 2:00pm</p>
         </div>
       </div>
-    </section>
 
-    <!-- HORARIOS & PRECIOS -->
-    <section id="horarios-precios" class="section bg-light">
-      <div class="container">
-        <h2>Horarios y Precios</h2>
-        <p class="section-sub">
-          Encuentra el horario que se adapta a ti y el plan ideal para comenzar.
-        </p>
-
-        <div class="row sp-grid">
-          <div class="col-lg-6 col-md-12">
-            <div class="sp-card sp-schedule">
-              <h3>Horarios</h3>
-              <ul class="schedule-list">
-                <li><strong>Lunes a viernes:</strong> 6:00am – 11:00pm</li>
-                <li><strong>Sábado:</strong> 7:00am – 3:00pm</li>
-                <li><strong>Domingo:</strong> 8:00am – 2:00pm</li>
-              </ul>
-              <p class="sp-note">
-                Siempre recomendamos llegar 10 minutos antes para calentar y
-                prepararte para tu sesión.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6 col-md-12">
-            <div class="sp-card sp-pricing">
-              <h3>Precios</h3>
-              <ul class="pricing-list">
-                <li class="pricing-item">
-                  <span class="pricing-label">Parejas</span>
-                  <span class="pricing-value">$899</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">Mensualidad</span>
-                  <span class="pricing-value">$569</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">Estudiantes</span>
-                  <span class="pricing-value">$419</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">Anualidad</span>
-                  <span class="pricing-value">$5,499</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">1 visita</span>
-                  <span class="pricing-value">$69</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">5 visitas</span>
-                  <span class="pricing-value">$299</span>
-                </li>
-                <li class="pricing-item">
-                  <span class="pricing-label">10 visitas</span>
-                  <span class="pricing-value">$449</span>
-                </li>
-              </ul>
-              <div class="pricing-cta">
-                <a class="btn btn-primary" href="#contacto">Contáctanos</a>
-                <a class="btn btn-outline" href="#planes"
-                  >Ver planes completos</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HORARIOS & PRECIOS — Alternativa (pricing cards) -->
-    <section id="horarios-precios-alt" class="section">
-      <div class="container">
-        <h2>Planes rápidos</h2>
-        <p class="section-sub">
-          Versión alternativa: tarjetas de precio destacadas para lectura
-          rápida.
-        </p>
-
-        <div class="row pricing-cards">
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard">
-              <div class="pcard-head">
-                <h4>Parejas</h4>
-                <div class="pcard-price">$899</div>
-              </div>
-              <div class="pcard-body">
-                <p>
-                  Plan pensado para dos personas que entrenan juntas con
-                  beneficios compartidos.
-                </p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Elegir</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard popular">
-              <div class="pcard-head">
-                <h4>Mensualidad</h4>
-                <div class="pcard-price">$569</div>
-              </div>
-              <div class="pcard-body">
-                <p>
-                  Opción flexible y popular: acceso completo durante un mes.
-                </p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Comenzar</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard">
-              <div class="pcard-head">
-                <h4>Estudiantes</h4>
-                <div class="pcard-price">$419</div>
-              </div>
-              <div class="pcard-body">
-                <p>
-                  Descuento especial para estudiantes con identificación
-                  vigente.
-                </p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Solicitar</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard">
-              <div class="pcard-head">
-                <h4>Anualidad</h4>
-                <div class="pcard-price">$5,499</div>
-              </div>
-              <div class="pcard-body">
-                <p>
-                  Ahorra con la anualidad — acceso completo y prioridad en
-                  eventos.
-                </p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-outline" href="#contacto">Más info</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard small">
-              <div class="pcard-head">
-                <h4>1 visita</h4>
-                <div class="pcard-price">$69</div>
-              </div>
-              <div class="pcard-body">
-                <p>Entrada única, ideal para probar el gimnasio.</p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Comprar</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard small">
-              <div class="pcard-head">
-                <h4>5 visitas</h4>
-                <div class="pcard-price">$299</div>
-              </div>
-              <div class="pcard-body">
-                <p>Pack de 5 visitas para quien entrena ocasionalmente.</p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Comprar</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-3">
-            <article class="pcard small">
-              <div class="pcard-head">
-                <h4>10 visitas</h4>
-                <div class="pcard-price">$449</div>
-              </div>
-              <div class="pcard-body">
-                <p>Pack de 10 visitas — mejor precio por sesión.</p>
-              </div>
-              <div class="pcard-footer">
-                <a class="btn btn-primary" href="#contacto">Comprar</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <footer class="site-footer bg-dark">
       <div class="container footer-grid">
