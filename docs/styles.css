@@ -161,6 +161,42 @@ body{
   .plan-card, .pcard, .trainer.card {min-height:0}
 }
 
+/* Unified card sizing across breakpoints for perfect visual alignment */
+@media (min-width:1200px){
+  .plan-card, .pcard, .trainer.card {min-height:420px}
+}
+@media (min-width:992px) and (max-width:1199px){
+  .plan-card, .pcard, .trainer.card {min-height:360px}
+}
+@media (min-width:768px) and (max-width:991px){
+  .plan-card, .pcard, .trainer.card {min-height:320px}
+}
+@media (max-width:767px){
+  .plan-card, .pcard, .trainer.card {min-height:auto}
+}
+
+/* Make CTAs consistent: full-width on small screens, inline on larger */
+.plan-card .btn, .pcard .pcard-footer .btn, .trainer.card .btn{
+  width: auto;
+}
+@media (max-width:767px){
+  .plan-card .btn, .pcard .pcard-footer .btn, .trainer.card .btn{
+    width:100%;
+  }
+}
+
+/* Ensure uniform padding and vertical rhythm inside cards */
+.plan-card .card-body, .pcard .pcard-body, .trainer.card{
+  padding:1rem;
+}
+
+/* Trainer image responsive adjustments */
+.trainer.card img{height:220px;max-height:260px}
+@media (max-width:767px){
+  .trainer.card img{height:auto;max-height:360px}
+}
+
+
 
 /* Horarios & Precios — new section */
 .sp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;align-items:start;margin-top:1rem}
