@@ -1,37 +1,10 @@
 // script.js — validación básica del formulario de leads y efectos mínimos
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("leadForm");
-  const feedback = form.querySelector(".form-feedback");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    feedback.textContent = "";
-    const name = form.name.value.trim();
-    const email = form.email.value.trim();
-
-    if (!name) {
-      feedback.textContent = "Por favor escribe tu nombre.";
-      form.name.focus();
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      feedback.textContent = "Introduce un correo válido.";
-      form.email.focus();
-      return;
-    }
-
-    // Simulación de envío exitoso — aquí conectarías con API o backend
-    feedback.textContent =
-      "¡Gracias! Pronto te contactaremos para agendar tu prueba.";
-    form.reset();
-  });
-
-  // Efecto de scroll suave para enlaces internos
+  // Smooth scroll for internal anchors (works without form)
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
-      if (href.length > 1) {
+      if (href && href.length > 1) {
         e.preventDefault();
         const el = document.querySelector(href);
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -39,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Mobile nav toggle
+  // Mobile nav toggle (safe guards)
   const navToggle = document.querySelector(".nav-toggle");
   const mainNav = document.getElementById("main-nav");
   if (navToggle && mainNav) {
@@ -55,6 +28,35 @@ document.addEventListener("DOMContentLoaded", function () {
           navToggle.setAttribute("aria-expanded", "false");
         }
       });
+    });
+  }
+
+  // Form handling (only if form exists)
+  const form = document.getElementById("leadForm");
+  if (form) {
+    const feedback = form.querySelector(".form-feedback") || document.createElement("p");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (feedback) feedback.textContent = "";
+      const name = (form.name && form.name.value) ? form.name.value.trim() : "";
+      const email = (form.email && form.email.value) ? form.email.value.trim() : "";
+
+      if (!name) {
+        if (feedback) feedback.textContent = "Por favor escribe tu nombre.";
+        if (form.name) form.name.focus();
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        if (feedback) feedback.textContent = "Introduce un correo válido.";
+        if (form.email) form.email.focus();
+        return;
+      }
+
+      // Simulación de envío exitoso — aquí conectarías con API o backend
+      if (feedback) feedback.textContent = "¡Gracias! Pronto te contactaremos para agendar tu prueba.";
+      form.reset();
     });
   }
 
